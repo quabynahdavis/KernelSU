@@ -23,6 +23,7 @@
 #include "hook/setuid_hook.h"
 #include "hook/syscall_hook.h"
 #include "hook/syscall_event_bridge.h"
+#include "infra/seccomp_cache.h"
 
 #ifdef CONFIG_KRETPROBES
 
@@ -138,6 +139,7 @@ static void ksu_process_exec_handler(void *data, struct task_struct *p, pid_t ol
     // Set tracepoint flag for init process
     if (task_pid_vnr(p) == 1 && strcmp(bprm->filename, "/system/bin/init") == 0) {
         pr_info("hook_manager: Android init namespace started (PID %i)\n", p->pid);
+        ksu_seccomp_allow_cache(current->seccomp.filter, __NR_reboot);
         ksu_set_task_tracepoint_flag(p);
         init_global_pid = p->pid;
     }
