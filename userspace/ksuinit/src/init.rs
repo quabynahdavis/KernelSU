@@ -10,7 +10,10 @@ use rustix::{
         FsMountFlags, FsOpenFlags, MountAttrFlags, MoveMountFlags, UnmountFlags, fsconfig_create,
         fsmount, fsopen, move_mount, unmount,
     },
+    system::delete_module,
 };
+
+use sysinfo::System;
 
 struct AutoUmount {
     mountpoints: Vec<String>,
@@ -98,38 +101,41 @@ pub fn init() -> Result<()> {
     log::info!("Hello, KernelSU!");
 
     // mount /proc to access kernel interface
-    let _dontdrop = prepare_mount();
+    // let _dontdrop = prepare_mount();
 
     // This relies on the fact that we have /proc mounted
     unlimit_kmsg();
 
     if ksuinit::has_kernelsu() {
-        log::info!("KernelSU may be already loaded in kernel, skip!");
-    } else {
-        log::info!("Loading kernelsu.ko..");
-        if let Err(e) = load_module_from_path("/kernelsu.ko") {
-            log::error!("Cannot load kernelsu.ko: {:?}", e);
+        log::info!("KernelSU already loaded in kernel, unloading..");
+        if let Err(e) = delete_module(CString::new("kernelsu").unwrap().as_c_str(), 0) {
+            log::error!("Cannot unload kernelsu.ko: {:?}", e);
         }
     }
 
+    log::info!("Loading kernelsu.ko..");
+    if let Err(e) = load_module_from_path(format!("/lib/modules/{}/extra/kernelsu.ko", System::kernel_version().unwrap()).as_str()) {
+        log::error!("Cannot load kernelsu.ko: {:?}", e);
+    }
+
     // And now we should prepare the real init to transfer control to it
-    unlink("/init")?;
-
-    let real_init = match access("/init.real", Access::EXISTS) {
-        Ok(_) => "init.real",
-        Err(_) => "/system/bin/init",
-    };
-
-    log::info!("init is {}", real_init);
-    symlink(real_init, "/init")?;
+    // unlink("/init")?;
+    //
+    // let real_init = match access("/init.real", Access::EXISTS) {
+    //     Ok(_) => "init.real",
+    //     Err(_) => "/system/bin/init",
+    // };
+    //
+    // log::info!("init is {}", real_init);
+    // symlink(real_init, "/init")?;
 
     Ok(())
 }
 
 fn load_module_from_path(path: &str) -> Result<()> {
-    anyhow::ensure!(rustix::process::getpid().is_init(), "Invalid process");
+    // anyhow::ensure!(rustix::process::getpid().is_init(), "Invalid process");
     let buffer = std::fs::read(path).with_context(|| format!("Cannot read file {}", path))?;
-    let params = std::fs::read("/ksu_config").unwrap_or_default();
+    let params = std::fs::read("/etc/kernelsu/config").unwrap_or_default();
     let params = unsafe { CString::from_vec_unchecked(params) };
     log::info!("load kernelsu with params {params:?}");
     ksuinit::load_module(&buffer, &params)
