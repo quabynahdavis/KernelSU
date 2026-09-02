@@ -49,10 +49,10 @@ If you would like to add support for a new language, feel free to open a PR. Ple
 
 For information on reporting security vulnerabilities in KernelSU, see [SECURITY.md](/SECURITY.md).
 
-## License
+## Project yi ho tumi nkrataa
 
-- Files under the `kernel` directory are [GPL-2.0-only](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
-- All other parts except the `kernel` directory are [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.html).
+- Files a ɛwɔ `kernel` directory no mu no nyinaa yɛ [GPL-2.0-pɛ](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
+- Afã afoforo nyinaa ɛwɔ project yi mu, gye `kernel` directory no pɛ, yɛ [GPL-3.0-anaa-n'abadiakyire].(https://www.gnu.org/licenses/gpl-3.0.html).
 
 ## Ndaase nkɔ mma
 
