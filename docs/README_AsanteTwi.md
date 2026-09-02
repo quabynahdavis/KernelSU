@@ -29,17 +29,17 @@ Currently, the `arm64-v8a` and `x86_64` architectures are supported.
 > [!CAUTION]
 > Recent kernel versions have implemented a breaking change causing KernelSU to fail and potentially trigger a kernel panic on `x86_64`! Check the website for more info!
 
-## Usage
+## Sɛnea yɛde di dwuma
 
 - [Installation](https://kernelsu.org/guide/installation.html)
 - [How to build](https://kernelsu.org/guide/how-to-build.html)
 - [Official website](https://kernelsu.org/)
 
-## Translation
+## Kasa nkyerɛaseɛ
 
-To help translate KernelSU, we no longer accept translation contributions via Weblate. All translations are now handled using LLMs.
+Sɛnea ɛbɛyɛ a yɛbɛboa ma wɔakyerɛ KernelSU ase akɔ kasa foforɔ mu no, yɛrengye nkyerɛase ntoboa nfa Weblate so bio. Mprempren yi, yɛde LLM ahorow na edi nkyerɛase nyinaa ho dwuma.
 
-If you would like to add support for a new language, feel free to open a PR. Please note that modifications to existing English and Chinese translations are not accepted.
+Sɛ wopɛ sɛ woboa ma yɛ yɛ nkyerɛaseɛ ma kasa foforo a, ntwentwɛn wo nan ase sɛ wubebue PR. Yɛsrɛ, monhyɛ no nsow sɛ yɛrengye nsakrae a wobɛyɛ wɔ Engiresi ne China nkyerɛase a ɛwɔ hɔ dedaw no mu ntom.
 
 ## Nkitahodie
 
