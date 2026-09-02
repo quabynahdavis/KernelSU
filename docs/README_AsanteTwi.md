@@ -12,34 +12,35 @@ Kernel-based root solutions a wɔayɛ ama Android mfidie ahorow
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-orange.svg?logo=gnu)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![GitHub License](https://img.shields.io/github/license/tiann/KernelSU?logo=gnu)](/LICENSE)
 
-## KernelSU ho su-ban
+## KernelSU ho Su
 
-1. Kernel-based `su` and root access management.
-2. Module system based on [metamodules](https://kernelsu.org/guide/metamodule.html): Pluggable infrastructure for systemless modifications.
-3. [App Profile](https://kernelsu.org/guide/app-profile.html): Lock up the root power in a cage.
+1. Ɛma wo `superuser` ne root-based access ɛwɔ kernel no so.
+2. Module ho nhyehyɛe a egyina [metamodules](https://kernelsu.org/guide/metamodule.html) so: Eyi tumi ma woyɛ nsakrae aberɛ a wonfa wonsa ɛnka system no.
+3. [App Profile](https://kernelsu.org/guide/app-profile.html): Fa root tumi no sie.
 
-## Compatibility state
+## Mfidie a KernelSU tumi yɛ adwuma wɔ so
 
-KernelSU officially supports Android GKI 2.0 devices (kernel 5.10+). Older kernels (4.14+) are also supported, but the kernel will need to be built manually.
+KernelSU bɔ adwuma yie paa wɔ mfidie a ekura Android GKI 2.0 (kernel 5.10+). Kernel adada (4.14+) bi so wɔ hɔ a KernelSU yɛ adwuma wɔ so. Nanso sɛ wopɛ no saa (wɔ 4.14 no so a), ɛsɛsɛ woankasa yɛ wo kernel compilation.
 
-With this, WSA, ChromeOS, and container-based Android are all supported.
+Ne saa nti, WSA, ChromeOS, ɛne container-based Android nyinaa tumi de KernelSU di dwuma .
 
-Currently, the `arm64-v8a` and `x86_64` architectures are supported.
+Sesiara no, `arm64-v8a` ne `x86_64` architecture nkoa na etumi fa.
 
-> [!CAUTION]
-> Recent kernel versions have implemented a breaking change causing KernelSU to fail and potentially trigger a kernel panic on `x86_64`! Check the website for more info!
+> [!AWHƐYIE]
+
+> Kernel versions a ɛreba nansa yi no de nsakrae soronko bi a ɛsɛe project yi dwumadie na ɛma KernelSU edi nkuguo. Eyi betumi akanyan `kernel panic` wɔ `x86_64` mfidie so! Hwɛ wɛbsaet no so na woanya nsɛm pii!!
 
 ## Sɛnea yɛde di dwuma
 
-- [Installation](https://kernelsu.org/guide/installation.html)
-- [How to build](https://kernelsu.org/guide/how-to-build.html)
+- [Sɛnea yɛ instɔle](https://kernelsu.org/guide/installation.html)
+- [Sɛ wopɛsɛ wo buildi wɔ wo machine so a](https://kernelsu.org/guide/how-to-build.html)
 - [Official website](https://kernelsu.org/)
 
 ## Kasa nkyerɛaseɛ
 
 Sɛnea ɛbɛyɛ a yɛbɛboa ma wɔakyerɛ KernelSU ase akɔ kasa foforɔ mu no, yɛrengye nkyerɛase ntoboa nfa Weblate so bio. Mprempren yi, yɛde LLM ahorow na edi nkyerɛase nyinaa ho dwuma.
 
-Sɛ wopɛ sɛ woboa ma yɛ yɛ nkyerɛaseɛ ma kasa foforo a, ntwentwɛn wo nan ase sɛ wubebue PR. Yɛsrɛ, monhyɛ no nsow sɛ yɛrengye nsakrae a wobɛyɛ wɔ Engiresi ne China nkyerɛase a ɛwɔ hɔ dedaw no mu ntom.
+Sɛ wopɛ sɛ woboa ma yɛ yɛ nkyerɛaseɛ ma kasa foforo a, ntwentwɛn wo nan ase sɛ wubebue PR. Yɛsrɛ, monhyɛ no nsow sɛ yɛrengye nsakrae a wobɛyɛ wɔ Engiresi ne China nkyerɛase a ɛwɔ hɔ dedaw no mu ntum.
 
 ## Nkitahodie
 
