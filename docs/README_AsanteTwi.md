@@ -4,7 +4,7 @@
 
 <img src="https://kernelsu.org/logo.png" style="width: 96px;" alt="logo">
 
-Kernel-based root solutions a wɔayɛ ama Android mfiri ahorow
+Kernel-based root solutions a wɔayɛ ama Android mfidie ahorow
 
 [![Latest release](https://img.shields.io/github/v/release/tiann/KernelSU?label=Release&logo=github)](https://github.com/tiann/KernelSU/releases/latest)
 [![Weblate](https://img.shields.io/badge/Localization-Weblate-teal?logo=weblate)](https://hosted.weblate.org/engage/kernelsu)
@@ -41,18 +41,18 @@ To help translate KernelSU, we no longer accept translation contributions via We
 
 If you would like to add support for a new language, feel free to open a PR. Please note that modifications to existing English and Chinese translations are not accepted.
 
-## Discussion
+## Nkitahodie
 
 - Telegram: [@KernelSU](https://t.me/KernelSU)
 
-## Security
+## Project ho ahobanbɔ
 
-For information on reporting security vulnerabilities in KernelSU, see [SECURITY.md](/SECURITY.md).
+Sɛ wopɛ nsɛm a ɛfa amanneɛbɔ a ɛfa ahobanbɔ ho mmerɛwyɛ ho wɔ KernelSU mu a, hwɛ [SECURITY.md](/SECURITY.md) fael no.
 
 ## Project yi ho tumi nkrataa
 
-- Files a ɛwɔ `kernel` directory no mu no nyinaa yɛ [GPL-2.0-pɛ](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
-- Afã afoforo nyinaa ɛwɔ project yi mu, gye `kernel` directory no pɛ, yɛ [GPL-3.0-anaa-n'abadiakyire].(https://www.gnu.org/licenses/gpl-3.0.html).
+- Faels a ɛwɔ `kernel` directory no mu no nyinaa yɛ [GPL-2.0-pɛ](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
+- Afã afoforo nyinaa a ɛwɔ project yi mu, gye `kernel` directory no pɛ, yɛ [GPL-3.0-anaa-n'abadiakyire](https://www.gnu.org/licenses/gpl-3.0.html).
 
 ## Ndaase nkɔ mma
 
